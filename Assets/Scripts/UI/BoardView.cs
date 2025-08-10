@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Linq;
 using System.Collections.Generic;
 
-public class BoardView : MonoBehaviour {
+public class BoardView : MonoBehaviour { public void ForceAIMove(){ var m = Engine.BestMove(board, PlayerPrefs.GetInt("aiDepth",2)); PlayMove(m); CheckGameOver(); }
   public GridLayoutGroup grid;
   public Image[] tiles = new Image[64];
   public Image[] pieceImgs = new Image[64];
